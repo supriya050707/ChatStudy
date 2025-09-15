@@ -73,6 +73,97 @@ Client-server chat applications are versatile tools that facilitate real-time co
 
 Client-server chat applications are foundational to real-time communication over networks. They incorporate principles of socket programming, communication protocols, and security mechanisms to provide a seamless user experience. Understanding the basics of client-server chat applications is essential for developers involved in networked application development, as they form the backbone of various collaborative communication systems. As technology evolves, chat applications continue to adapt, incorporating new features and technologies to enhance user interaction and connectivity.
 
+## program
+Client Program:
+
+import socket
+
+s = socket.socket()
+
+host = input('Enter hostname or host IP: ')
+
+port = 8080  
+
+s.connect((host, port))
+
+print('Connected to chat server')
+
+while True:
+
+    incoming_message = s.recv(1024)
+    
+    incoming_message = incoming_message.decode()
+    
+    print('Server:', incoming_message)
+    
+    print()
+    
+    message = input('>> ')
+    
+    message = message.encode()
+    
+    s.send(message)
+    
+    print('Sent')
+    
+    print()
+
+
+Server Program:
+ 
+ import socket
+
+
+s = socket.socket()
+
+host = socket.gethostname()
+
+print('Server will start on host:', host)
+
+port = 8080
+
+s.bind((host, port))
+
+print()
+
+print('Waiting for connection...')
+
+print()
+
+s.listen(1)
+
+conn, addr = s.accept()
+
+print(addr, 'has connected to the server')
+
+print()
+
+while True:
+    
+    message = input('>> ')
+    
+    message = message.encode()
+    
+    conn.send(message)
+    
+    print('Sent')
+    
+    print()
+
+    incoming_message = conn.recv(1024)
+    
+    incoming_message = incoming_message.decode()
+    
+    print('Client:', incoming_message)
+    
+    print()
+
+
+## output
+<img width="841" height="247" alt="Screenshot 2025-09-08 111513" src="https://github.com/user-attachments/assets/5ee541ec-22de-40ef-ad11-30f34605f1c2" />
+
+<img width="656" height="360" alt="Screenshot 2025-09-08 111505" src="https://github.com/user-attachments/assets/fd7cb26c-160d-4eaa-b042-10be64672157" />
+
 
 ## Result:
 
