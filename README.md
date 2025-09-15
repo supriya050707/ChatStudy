@@ -160,7 +160,9 @@ while True:
 
 
 ## output
+
 <img width="841" height="247" alt="Screenshot 2025-09-08 111513" src="https://github.com/user-attachments/assets/5ee541ec-22de-40ef-ad11-30f34605f1c2" />
+
 
 <img width="656" height="360" alt="Screenshot 2025-09-08 111505" src="https://github.com/user-attachments/assets/fd7cb26c-160d-4eaa-b042-10be64672157" />
 
