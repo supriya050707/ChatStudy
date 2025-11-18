@@ -75,7 +75,7 @@ Client-server chat applications are foundational to real-time communication over
 
 ## program
 Client Program:
-
+```
 import socket
 
 s = socket.socket()
@@ -107,10 +107,10 @@ while True:
     print('Sent')
     
     print()
-
+```
 
 Server Program:
- 
+ ```
  import socket
 
 
@@ -158,6 +158,7 @@ while True:
     
     print()
 
+```
 
 ## output
 
